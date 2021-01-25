@@ -1,0 +1,339 @@
+<!-   I am a Japanese who loves peg solitaire. 
+I made a collection of peg solitaire questions and answers using Mr. ask5's peg solitaire code. 
+I am very pleased with the ultimate peg solitaire Thank you
+->
+
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Solitaire</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/main.min.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1>Solitaire Problems＆Answers</h1>
+        <div class="menu">
+            <select id="patterns" onchange="change_pattern();"></select>
+            <span class="item" id="start_timer" onclick="start_timer();">start timer</span> |
+            <span class="item" id="stop_timer" onclick="stop_timer();">stop timer</span> |
+            <span class="item disabled" id="undo" onclick="undo();">undo</span> |
+            <span class="item" id="reset" onclick="reset();">reset</span> |
+            <span class="item" id="replay" onclick="replay();">replay</span> | 
+            <span class="item" onclick="show_rules();">rules</span> |
+            
+            <span class="item" onclick="show_answers();">answers</span> |            
+            <a target="_blank" href="https://github.com/ask5/solitaire" class="source">source code</a>
+            <span class="item" id="timer"></span>
+        </div>
+        <div id="main-section" >
+            <div id="board-container"></div>
+            <div id="rules" class="hide" onclick="hide_rules();">
+                <span onclick="hide_rules();">X</span>
+                <p>
+                    The objective is to remove every piece (peg) from the board except one. 
+                    A valid move is to jump a peg over an adjacent peg into a hole two positions away 
+                    and then to remove the jumped peg. Only vertical or horizontal movement is allowed in 
+                    most board types. Diagonal movement is allowed only in the Triagular board. 
+                    For more information visit <a href="https://en.wikipedia.org/wiki/Peg_solitaire" target="_blank">this wiki page</a>.
+                </p>
+                <img src="5-1.png" alt="" width="250px"height="250px">
+                <img src="to.png" alt="" width="250px"height="250px">
+                <ol>
+                    How to use the problem collection
+                    How to play the game 
+                    Please open the number (5-1) from the problem 
+                    
+                    <li>Jump over the peg at position 36 to position 34 and move. </li>
+                    <li>Remove the peg at position 35. If you jump over, you can remove the peg.</li>
+                    <li>Move the pug at position 44 to position 24. </li>
+                    <li> Remove the peg at position 34. </li>
+                    <li>Move the peg at position 32 to position 34, move the peg at position 24 to position 44 ... </li>
+                    <li>                       
+                        Only one peg remained at the 44 position in the center. 
+                       The peg can only be moved up, down, left and right. Cannot move diagonally                       
+                   </li>
+                   <li>★　★★　　★★★
+                    Difficult 　problems are starred and these problems have answers </li>
+                    <li>For all issues, there is only one peg left on the board at the end of the game</li>
+                    <li>one of which is always in the 44th position in the center</li>
+                    <li> Problems 12-8, 13-11, 14-18, 18-4, 20-3 This is a particularly difficult problems, so I posted multiple answers.</li>
+                   <li style="list-style:non">                   
+                    I love peg solitaire
+                    Take on the challenge 
+                    Have a lot of fun
+                    </li>
+
+                </ol>
+            </div> 
+            <div id="board-container"></div>
+
+            <div id="answers" class="hide" onclick="hide_answers();">
+                <span onclick="hide_answers();">X</span>
+                <ul >
+                   <li style="list-style: none">Ansers</li> 
+                   <li style="list-style: none">                    
+                       *  **  *** A guideline for difficulty There is an answer because it is a difficult problem</li>
+                    <li>For all issues, there is only one peg left on the board at the end of the game</li>
+                    <li>one of which is always in the 44th position in the center</li>
+                    <li> Problems 12-8, 13-11, 14-18, 18-4, 20-3 This is a particularly difficult problems, so I posted multiple answers.</li>
+                   <li style="list-style: non">                   
+                    I love peg solitaire
+                    Take on the challenge 
+                    Have a lot of fun
+                    </li> 
+                    <li style="list-style:none"></li>
+
+            <li>7-1 = 44to24; 33to53; 41to43; 53to33; 32to34; 24to44</li>
+            <li>7-2 = 33to53; 34to54; 53to55; 55to35; 36to34; 24to44</li>
+            <li>7-5 = 44to64; 52to54; 64to44; 44to42; 23to43; 42to44</li>
+            <li>7-10 = 54to56; 35to55; 74to54; 44to64; 56to54; 64to44</li>
+            <li>7-11 = 23to43; 44to42; 35to33; 25to23; 23to43; 42to44</li>
+            <li>7-12 = 35to33; 54to34; 34to32; 53to33; 32to34; 24to44</li>
+            <li>7-13 = 33to53; 53to55; 55to35; 35to33; 23to43; 42to44</li>
+            <li>7-17 = 31to33; 42to43; 34to32; 53to33; 32to34; 24to44</li>
+            <li>
+              8-1 = 53to55; 63to65; 43to45; 46to44; 65to45; 45to43; 42to44
+            </li>
+            <li>
+              8-4 = 54to56; 47to45; 35to55; 74to54; 44to64; 56to54; 64to44
+            </li>
+            <li>
+              8-5 = 44to64; 52to54; 73to53; 54to52; 33to53; 52to54; 64to44
+            </li>
+            <li>
+              8-6 = 54to52; 52to32; 32to34; 35to33; 44to42; 23to43; 42to44
+            </li>
+            <li>
+              8-8 = 52to54; 54to56; 33to35; 43to45; 35to55; 56to54; 64to44
+            </li>
+            <li>
+              8-9 = 42to44; 44to64; 52to54; 64to44; 44to24; 32to34; 24to44
+            </li>
+            <li>
+              8-11 = 33to13; 25to23; 13to33; 42to44; 44to24; 32to34; 24to44
+            </li>
+            <li>
+              8-12 = 53to55; 55to35; 23to43; 35to33; 33to53; 63to43; 42to44
+            </li>
+            <li>
+              8-15 = 54to52; 35to33; 33to53; 74to54; 44to64; 52to54; 64to44
+            </li>
+            <li>
+              8-16 = 31to51; 51to53; 63to43; 42to44; 44to24; 32to34; 24to44
+            </li>
+            <li>
+              8-17 = 51to31; 52to32; 54to53; 31to33; 33to53; 52to54; 64to44
+            </li>
+            <li>
+              9-1 = 56to54; 43to63; 35to55; 55to53; 23to43; 44to42; 63to43; 42to44
+            </li>
+            <li>
+              9-2 = 35to55; 43to45; 55to35; 24to44; 36to35; 44to34; 32to34; 24to44
+            </li>
+            <li>
+              9-5 = 55to35; 35to33; 53to55; 56to54; 33to53; 44to64; 53to54; 64to44
+            </li>
+            <li>
+              9-8 = 15to35; 35to33; 54to52; 53to32; 14to34; 44to24; 32to34; 24to44
+            </li>
+            <li>
+              9-9 = 44to46; 25to45; 37to35; 45to25; 31to33; 33to35; 25to45; 46to44
+            </li>
+            <li>
+              9-10 = 55to35; 47to45; 35to55; 74to54; 43to63; 55to53; 63to43; 42to44
+            </li>
+            <li>
+              9-14 = 13to15; 45to25; 15to35; 36to34; 24to44; 44to42; 23to43; 42to44
+            </li>
+            <li>
+              9-15 = 23to43; 43to63; 51to53; 54to52; 31to51; 51to53; 63to43; 42to44
+            </li>
+            <li>
+              9-16 = 34to32; 13to33; 45to43; 43to23; 15to13; 13to33; 32to34; 24to44
+            </li>
+            <li>
+              10-7=44to46; 55to75; 63to65; 75to55; 25to45; 23to25; 55to35;
+              25to45; 46to44
+            </li>
+            <li>
+              10-8=24to44; 36to34; 34to54; 42to44; 54to34; 46to44; 44to24;
+              32to34; 24to44
+            </li>
+            <li>
+              10-9=34to36; 37to35; 14to34; 43to23; 35to33; 42to43; 44to42;
+              23to43; 42to44
+            </li>
+            <li>
+              10-10=55to53; 63to43; 51to53; 43to63; 73to53; 34to54; 53to55;
+              56to54; 64to44
+            </li>
+            <li>
+              10-13=15to35; 45to25; 13to15; 15to35; 36to34; 24to44; 44to42;
+              23to43; 42to44
+            </li>
+            <li>
+              10-15=55to53; 53to33; 34to54; 51to53; 54to52; 41to43; 33to53;
+              52to54; 64to44
+            </li>
+            <li>
+              10-29=54to34; 33to35; 36to34; 31to33; 34to32; 41to43; 53to33;
+              32to34; 24to44
+            </li>
+            <li>
+              11-5=53to54; 54to56; 56to36; 36to34; 44to24; 33to53; 41to43;
+              53to33; 32to34; 24to44
+            </li>
+            <li>
+              11-14=34to36; 15to35; 45to25; 13to15; 15to35; 36to34; 24to44;
+              44to42; 23to43; 42to44
+            </li>
+            <li>
+              11-15=45to65; 53to55; 65to45; 24to44; 44to46; 25to45; 46to44;
+              44to42; 23to43; 42to44
+            </li>
+            <li>
+              11-16=43to45; 24to44; 45to43; 73to53; 43to64; 74to54; 75to55;
+              55to53; 63to43; 42to44
+            </li>
+            <li>
+              11-17=54to53; 31to51; 51to53; 32to52; 52to54; 34to36; 54to34;
+              33to35; 36to34; 24to44
+            </li>
+            <li>
+              11-21=65to45; 63to43; 35to55; 43to45; 55to35; 24to44; 36to34;
+              44to24; 32to34; 24to44
+            </li>
+            <li>
+              12-5=25to45; 55to35; 47to45; 45to25; 37to35; 34to36; 15to35;
+              14to34; 44to24; 36to34; 24to44
+            </li>
+            <li>
+              12-8=33to35; 13to33; 43to23; 31to33; 23to25; 25to45; 45to43;
+              54to52; 33to53; 52to54; 64to44
+            </li>
+            <li>
+              12-8=54to52; 34to54; 64to44; 33to53; 52to54; 54to34; 31to33;
+              34to32; 13to33; 32to34; 24to44
+            </li>
+            <li>
+              12-8=44to42; 23to43; 31to33; 43to23; 13to33; 54to52; 52to32;
+              24to44; 32to34; 34to54; 64to44
+            </li>
+            <li>
+              12-8=43to45; 64to44; 23to43; 53to33; 45to43; 43to23; 31to33;
+              34to32; 13to33; 32to34; 24to44
+            </li>
+            <li>
+              12-8=43to45; 23to43; 31to33; 43to23; 13to33; 54to52; 24to44;
+              45to43; 33to53; 52to54; 64to44
+            </li>
+            <li>
+              12-11=55to35; 35to33; 14to34; 33to35; 43to45; 35to55; 64to44;
+              56to54; 44to64; 52to54; 64to44
+            </li>
+            <li>
+              12-14=43to23; 23to25; 44to46; 25to45; 45to65; 31to33; 41to43;
+              33to53; 53to55; 65to45; 46to44
+            </li>
+            <li>
+              13-2=44to46; 65to45; 63to65; 35to55; 65to45; 46to44; 44to42;
+              23to43; 25to23; 53to33; 23to43; 42to44
+            </li>
+            <li>
+              13-3=44to46; 65to45; 46to44; 25to45; 33to35; 35to55; 53to33;
+              55to53; 23to43; 44to42; 63to43; 42to44
+            </li>
+            <li>
+              13-9=43to23; 35to33; 23to43; 53to33; 51to53; 63to43; 43to23;
+              31to33; 41to43; 44to42; 23to43; 42to44
+            </li>
+            <li>
+              13-10=53to73; 73to75; 75to55; 55to53; 34to54; 43to63; 51to53;
+              64to44; 41to43; 44to42; 63to43; 42to44
+            </li>
+            <li>
+              13-11=25to45; 45to43; 43to63; 55to53; 63to43; 34to32; 13to33;
+              43to23; 15to13; 13to33; 32to34; 24to44
+            </li>
+            <li>
+              13-11=25to45; 45to65; 53to55; 65to45; 45to43; 34to32; 13to33;
+              43to23; 15to13: 13to33; 32to34; 24to44
+            </li>
+            <li>
+              13-12=33to53; 41to43; 53to33; 34to36; 15to35; 36to34; 34to32;
+              13to33; 14to34; 44to24; 32to34; 24to44
+            </li>
+            <li>
+              13-13=25to45; 37to35; 35to55; 55to53; 23to43; 31to33; 34to32;
+              53to33; 14to34; 44to24; 32to34; 24to44
+            </li>
+            <li>
+              13-21=55to57; 35to55; 54to56; 57to55; 65to45; 33to35; 35to55;
+              52to54; 55to53; 44to42; 63to43; 42to44
+            </li>
+            <li>
+              13-22=34to14; 36to34; 44to24; 14to34; 64to44; 34to54; 46to44;
+              44to64; 32to52; 33to53; 52to54; 64to44
+            </li>
+            <li>
+              13-23=45to65; 47to45; 35to55; 65to45; 34to32; 53to33; 55to43;
+              33to53; 41to43; 53to33; 32to34; 24to44
+            </li>
+            <li>14-1=54to56; 74to54; 53to55; 56to54;45to25; 25to23; 43to45; 23to43; 42to44; 44to24; 46to44; 54to34; 24to44</li>
+<li>14-2=15to35; 34to36; 14to34; 33to35; 36to34; 31to33; 51to31; 34to32; 13to33; 43to23; 31to33; 23to43; 42to44</li>
+<li>14-8 =44to46; 64to44; 43to45; 46to44; 25to45; 45to43; 34to32; 13to33; 15to13; 43to23; 13to33; 32to34; 24to44</li>
+<li>14-18=34to32; 13to33; 45to43; 15to13; 43to23; 13to33; 32to34; 25to45; 37to35; 34to36; 55to35; 36to34; 24to44</li>
+<li>14-18=45to65; 25to45; 37to35; 35to55; 65to45; 45to43; 34to32; 13to33; 15to13; 43to23; 13to33; 32to34; 24to44</li>
+<li>14-19=43to23; 23to25; 41to43; 53to33; 32to34; 35to37; 37to57; 34to54; 54to56; 57to55; 55to35; 25to45; 46to44</li>
+<li>15-2=44to46; 64to45; 46to44; 43to45; 63to43; 64to44; 35to55; 43to45; 55to35; 24to44; 36to34; 44to24;32to34; 24to44</li>
+<li>15-3=33to35; 14to34; 35to33; 73to75; 43to45; 45to65; 75to55; 23to33; 64to44; 44to42; 52to54; 55to53; 63to43; 42to44</li>
+<li>15-7=25to45; 55to35; 47to45; 45to25; 37to35; 25to45; 34to32; 13to33; 15to13; 45to43; 43to23; 13to33; 32to34; 24to44</li>
+<li>15-10=55to57; 75to55; 54to56; 57to55; 73to75; 45to65; 75to55; 43to45; 55to35; 35to33; 63to43; 33to53; 52to54; 64to44</li>
+<li>16-11=45to65; 47to45; 35to55; 55to75; 75to73; 43to63; 73to53; 64to44; 34to32; 41to43; 53to33; 14to34; 44to24; 32to34; 24to44</li>
+<li>16-12=13to15; 23to25; 15to35; 43to23; 35to33; 63to43; 51to53; 43to63; 23to43; 31to33; 33to53; 41to43; 44to42; 63to43; 42to44</li>
+<li>16-13=23to43; 31to33; 43to23; 41to43; 53to33; 37to35; 34to36; 15to35; 36to34; 34to32; 13to33; 14to34; 44to24; 32to34; 24to44</li>
+<li>16-21=34to36; 15to35; 36to34; 34to32; 13to33; 32to34; 45to65; 53to55; 65to45; 34to54; 46to44; 54to34; 42to44; 34to54; 64to44</li>
+<li>17-3=43to23; 23to25; 15to35; 41to43; 43to63; 63to65; 75to55; 45to65; 57to55; 65to45; 45to25; 37to35; 47to45; 44to46; 25to45; 46to44</li>
+<li>18-1=55to57; 53to55; 74to54; 57to37; 45to25; 37to35; 25to45; 33to31; 31to51; 51to53; 55to35; 35to33; 54to34; 34to32; 53to33; 32to34; 24to44; </li>
+<li>18-2=35to37; 55to35; 47to45; 34to36; 37to35; 35to15; 15to13; 32to34; 13to33; 34to32; 53to33; 45to43; 33to53; 41to43; 53to33; 32to34; 24to44</li>
+<li>18-4=55to75; 75to73; 53to55; 73to53; 55to35; 34to54; 53to33; 32to34; 24to44; 36to34; 51to53; 54to52; 34to54; 57to55; 55to53; 52to54; 64to44</li>
+<li>18-4-55to35; 53to55; 74to54; 55to53; 57to55; 65to45; 53to33; 51to53; 63to43; 35to55; 43to45; 55to35; 24to44; 36to34; 44to24; 32to34; 24to44</li>
+<li>18-5=45to65; 65to63; 44to42; 63to43; 42to44; 25to45; 33to13; 13to15; 37to35; 31to33; 34to32; 45to25; 15to35; 54to34; 35to33; 32to34; 24to44</li>
+<li>18-5=35to15; 33to35; 14to34; 45to25; 53to33; 33to35; 36to34; 15to35; 34to36; 31to33; 23to43; 54to56; 37to35; 43to45; 35to55; 56to54; 64to44</li>
+<li>18-6=45to25; 15to35; 34to36; 37to35; 65to45; 45to25; 56to36; 57to37; 37to35; 25to45; 54to52; 52to32; 33to53; 45to43; 53to33; 32to34; 24to44</li>
+<li>18-7=45to65; 43to45; 35to55; 23to43; 15to35; 65to45; 45to25; 13to15; 31to33; 34to32; 53to33; 37to35; 32to34; 34to36; 15to35; 36to34; 24to44</li>
+<li>19-1=54to56; 75to55; 74to54; 54to52; 73to53; 52to54; 44to64; 56to54; 64to44; 34to36; 15to35; 36to34; 34to32; 13to33; 14to34; 44to24; 32to34; 24to44</li>
+<li>19-2=55to75; 75to73; 53to55; 75to53; 51to31; 52to32; 31to33; 34to54; 54to52; 33to53; 52to54; 55to35; 47to45; 57to55; 54to56; 35to55; 56to54; 64to44</li>
+<li>20-1=45to25; 15to35; 43to23; 13to33; 47to45; 35to55; 55to53; 74to54; 41to43; 43to23; 31to33; 23to43; 53to33; 37to35; 34to36; 54to34; 33to35; 36to34; 24to44</li>
+<li>20-2=35to55; 65to45; 33to53; 63to43; 37to35; 35to15; 15to13; 13to33; 54to74; 34to54; 46to44; 44to64; 74to54; 43to23; 31to33; 23to43; 42to44; 54to34; 24to44</li>
+<li>20-3=25to45; 55to35; 41to43; 43to45; 45to25; 15to35; 13to15; 47to45; 45to25; 23to43; 31to33; 34to32; 53to33; 32to34; 37to35; 34to36; 15to35; 36to34; 24to44</li>
+<li>20-3=25to45; 55to35; 47to45; 45to25; 37to35; 34to36; 15to35; 36to34; 23to43; 53to33; 41to43; 43to23; 31to33; 34to32; 13to33; 44to24; 32to34; 24to44</li>
+<li>20-4=37to35; 53to73; 51to53; 43to63; 73to53; 23to43; 53to33; 41to43; 43to23; 31to33; 34to36; 15to35; 36to34; 34to32; 14to34; 44to24; 13to33; 32to34; 24to44</li>
+<li>20-7=45to25; 37to35; 25to45; 43to23; 31to33; 23to43; 54to34; 46to44; 34to54; 42to44; 54to52; 73to53; 52to54; 54to56; 74to54; 44to64; 75to55; 56to54; 64to44</li>
+<li>21-1=54to56; 75to55; 56to54; 63to65; 73to75; 75to55; 45to65; 53to55; 65to45; 45to25; 37to35; 25to45; 46to44; 43to23; 31to33; 23to43; 34to54; 42to44; 54to34; 24to44</li>
+<li>23-1=75to55; 54to46; 73to53; 74to54; 53to55; 56to54; 35to55; 47to45; 55to35; 35to15; 33to53; 41to43; 53to33; 15to13; 33to35; 54to34; 24to44; 36to34; 44to24; 13to33; 32to34; 24to44</li>
+<li>25-1=25to45; 57to55; 55to35; 47to45; 45to25; 37to35; 43to45; 63to43; 33to53; 41to43; 43to63; 51to53; 63to43; 31to33; 34to36; 15to35; 13to15; 45to25; 15to35; 36to34; 24to44; 44to42; 23to43; 42to44</li>
+
+
+
+
+
+            </ul>
+            </div>
+        </div>
+        <div id="info-section">
+            <div id="log-container">
+                <ol id="log">
+                </ol>
+            </div>
+        </div>
+    </div>
+    <script src="dist/solitaire.js"></script>
+</body>
+
+</html>
